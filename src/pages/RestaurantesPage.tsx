@@ -9,12 +9,12 @@ import restBistro from "@/assets/rest-bistro.jpg";
 import restLanchonete from "@/assets/rest-lanchonete.jpg";
 
 const restaurants = [
-  { name: "Restaurante do Museu", type: "Frutos do Mar", desc: "Especialidade em peixes frescos e sequência de camarão, com vista para o mar.", price: "$$", rating: 5, image: restMuseu },
-  { name: "Rancho Açoriano", type: "Comida Típica", desc: "Culinária açoriana autêntica com pratos fartos e ambiente rústico acolhedor.", price: "$$", rating: 4, image: restAcoriano },
-  { name: "Cantinho da Baia", type: "Frutos do Mar", desc: "Restaurante à beira-mar com ostras frescas e pratos de peixe grelhado.", price: "$$$", rating: 5, image: restBaia },
-  { name: "Pizzaria da Praça", type: "Pizzaria", desc: "Pizzas artesanais com ingredientes locais. Ótima opção para jantares descontraídos.", price: "$", rating: 4, image: restPizzaria },
-  { name: "Bistrô do Porto", type: "Contemporâneo", desc: "Cozinha criativa com toques catarinenses. Carta de vinhos selecionada.", price: "$$$", rating: 5, image: restBistro },
-  { name: "Lanchonete da Praia", type: "Lanches", desc: "Açaí, pastéis e lanches rápidos na beira da praia. Perfeito para aquele pit stop.", price: "$", rating: 4, image: restLanchonete },
+  { name: "Restaurante Raízes", type: "Frutos do Mar", desc: "Especialidade: comida caseira e açoriana (peixes e frutos do mar)", price: "$$", rating: 5, image: restMuseu },
+  { name: "Palmas Steakhouse", type: "Churrascaria, sul-americana", desc: "Churrasco de qualidade e carnes bem preparadas,Vista e ambiente confortável — ideal para noites especiais.", price: "$$", rating: 4, image: restAcoriano },
+  { name: "Illa Gastrobar", type: "Bar, café, contemporâneo", desc: "Vista imperdível — fácil de acessar do centro,Cardápio variado e coquetéis bem feitos.", price: "$$$", rating: 5, image: restBaia },
+  { name: "La Bonna Pizza", type: "Pizzaria", desc: "Rodízio de pizza — bem gostoso e com bom custo-benefício, ótima opção para famílias e grupos.", price: "$", rating: 4, image: restPizzaria },
+  { name: "Pomodori Praia", type: "Italiana, brasileira", desc: "Localização privilegiada na Praia Grande — pé na rua principal,Cardápio: massas, pizzas e pratos brasileiros.", price: "$$$", rating: 5, image: restBistro },
+  { name: "Restaurante do Edu", type: "Frutos do mar, brasileira", desc: "Mesas pé na areia (ambiente aberto) + área climatizada, Mar calmo ideal para brincar; cães permitidos na área externa.", price: "$", rating: 4, image: restLanchonete },
 ];
 
 const RestaurantesPage = () => (
