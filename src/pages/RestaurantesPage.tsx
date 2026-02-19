@@ -1,15 +1,20 @@
-import { MapPin, DollarSign, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
-import restaurantThumb from "@/assets/restaurant-thumb.jpg";
+import restMuseu from "@/assets/rest-museu.jpg";
+import restAcoriano from "@/assets/rest-acoriano.jpg";
+import restBaia from "@/assets/rest-baia.jpg";
+import restPizzaria from "@/assets/rest-pizzaria.jpg";
+import restBistro from "@/assets/rest-bistro.jpg";
+import restLanchonete from "@/assets/rest-lanchonete.jpg";
 
 const restaurants = [
-  { name: "Restaurante do Museu", type: "Frutos do Mar", desc: "Especialidade em peixes frescos e sequência de camarão, com vista para o mar.", price: "$$", rating: 5 },
-  { name: "Rancho Açoriano", type: "Comida Típica", desc: "Culinária açoriana autêntica com pratos fartos e ambiente rústico acolhedor.", price: "$$", rating: 4 },
-  { name: "Cantinho da Baia", type: "Frutos do Mar", desc: "Restaurante à beira-mar com ostras frescas e pratos de peixe grelhado.", price: "$$$", rating: 5 },
-  { name: "Pizzaria da Praça", type: "Pizzaria", desc: "Pizzas artesanais com ingredientes locais. Ótima opção para jantares descontraídos.", price: "$", rating: 4 },
-  { name: "Bistrô do Porto", type: "Contemporâneo", desc: "Cozinha criativa com toques catarinenses. Carta de vinhos selecionada.", price: "$$$", rating: 5 },
-  { name: "Lanchonete da Praia", type: "Lanches", desc: "Açaí, pastéis e lanches rápidos na beira da praia. Perfeito para aquele pit stop.", price: "$", rating: 4 },
+  { name: "Restaurante do Museu", type: "Frutos do Mar", desc: "Especialidade em peixes frescos e sequência de camarão, com vista para o mar.", price: "$$", rating: 5, image: restMuseu },
+  { name: "Rancho Açoriano", type: "Comida Típica", desc: "Culinária açoriana autêntica com pratos fartos e ambiente rústico acolhedor.", price: "$$", rating: 4, image: restAcoriano },
+  { name: "Cantinho da Baia", type: "Frutos do Mar", desc: "Restaurante à beira-mar com ostras frescas e pratos de peixe grelhado.", price: "$$$", rating: 5, image: restBaia },
+  { name: "Pizzaria da Praça", type: "Pizzaria", desc: "Pizzas artesanais com ingredientes locais. Ótima opção para jantares descontraídos.", price: "$", rating: 4, image: restPizzaria },
+  { name: "Bistrô do Porto", type: "Contemporâneo", desc: "Cozinha criativa com toques catarinenses. Carta de vinhos selecionada.", price: "$$$", rating: 5, image: restBistro },
+  { name: "Lanchonete da Praia", type: "Lanches", desc: "Açaí, pastéis e lanches rápidos na beira da praia. Perfeito para aquele pit stop.", price: "$", rating: 4, image: restLanchonete },
 ];
 
 const RestaurantesPage = () => (
@@ -28,7 +33,7 @@ const RestaurantesPage = () => (
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <div className="h-44 overflow-hidden">
-                <img src={restaurantThumb} alt={r.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <img src={r.image} alt={r.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               </div>
               <div className="p-5">
                 <span className="inline-block text-xs font-semibold uppercase tracking-wider text-primary mb-2">{r.type}</span>
