@@ -19,8 +19,8 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-card/190 backdrop-blur-md border-b border-border">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 text-xl font-bold text-primary font-sans border-0">
-          <img src={logo} alt="Feito Maré" className="h-20 w-20 rounded-full object-fill" />
+        <Link to="/" className="flex items-center gap-2.5 text-xl font-bold text-primary font-sans border-0 text-right">
+          <img src={logo} alt="Feito Maré" className="h-20 w-20 object-fill rounded-full" />
           Feito Maré
         </Link>
 
