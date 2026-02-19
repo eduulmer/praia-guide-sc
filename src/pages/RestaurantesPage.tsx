@@ -1,20 +1,20 @@
 import { Star } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
-import restMuseu from "@/assets/rest-museu.jpg";
-import restAcoriano from "@/assets/rest-acoriano.jpg";
-import restBaia from "@/assets/rest-baia.jpg";
+import restRaizes from "@/assets/rest-museu.jpg";
+import restSteak from "@/assets/rest-acoriano.jpg";
+import restIlla from "@/assets/rest-baia.jpg";
 import restPizzaria from "@/assets/rest-pizzaria.jpg";
-import restBistro from "@/assets/rest-bistro.jpg";
-import restLanchonete from "@/assets/rest-lanchonete.jpg";
+import restPomodori from "@/assets/rest-bistro.jpg";
+import restEdu from "@/assets/rest-lanchonete.jpg";
 
 const restaurants = [
-  { name: "Restaurante Raízes", type: "Frutos do Mar", desc: "Especialidade: comida caseira e açoriana (peixes e frutos do mar)", price: "$$", rating: 5, image: restMuseu },
-  { name: "Palmas Steakhouse", type: "Churrascaria, sul-americana", desc: "Churrasco de qualidade e carnes bem preparadas, vista e ambiente confortável — ideal para noites especiais.", price: "$$", rating: 4, image: restAcoriano },
-  { name: "Illa Gastrobar", type: "Bar, café, contemporâneo", desc: "Vista imperdível — fácil de acessar do centro, cardápio variado e coquetéis bem feitos.", price: "$$$", rating: 5, image: restBaia },
+  { name: "Restaurante Raízes", type: "Frutos do Mar", desc: "Especialidade: comida caseira e açoriana (peixes e frutos do mar)", price: "$$", rating: 5, image: restRaizes },
+  { name: "Palmas Steakhouse", type: "Churrascaria, sul-americana", desc: "Churrasco de qualidade e carnes bem preparadas, vista e ambiente confortável — ideal para noites especiais.", price: "$$", rating: 4, image: restSteak },
+  { name: "Illa Gastrobar", type: "Bar, café, contemporâneo", desc: "Vista imperdível — fácil de acessar do centro, cardápio variado e coquetéis bem feitos.", price: "$$$", rating: 5, image: restIlla },
   { name: "La Bonna Pizza", type: "Pizzaria", desc: "Rodízio de pizza — bem gostoso e com bom custo-benefício, ótima opção para famílias e grupos.", price: "$", rating: 4, image: restPizzaria },
-  { name: "Pomodori Praia", type: "Italiana, brasileira", desc: "Localização privilegiada na Praia Grande — pé na rua principal, cardápio: massas, pizzas e pratos brasileiros.", price: "$$$", rating: 5, image: restBistro },
-  { name: "Restaurante do Edu", type: "Frutos do mar, brasileira", desc: "Mesas pé na areia (ambiente aberto) + área climatizada, mar calmo ideal para brincar; cães permitidos na área externa.", price: "$", rating: 4, image: restLanchonete },
+  { name: "Pomodori Praia", type: "Italiana, brasileira", desc: "Localização privilegiada na Praia Grande — pé na rua principal, cardápio: massas, pizzas e pratos brasileiros.", price: "$$$", rating: 5, image: restPomodori },
+  { name: "Restaurante do Edu", type: "Frutos do mar, brasileira", desc: "Mesas pé na areia (ambiente aberto) + área climatizada, mar calmo ideal para brincar; cães permitidos na área externa.", price: "$", rating: 4, image: restEdu },
 ];
 
 const RestaurantesPage = () => (
