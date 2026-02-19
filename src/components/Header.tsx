@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Shell } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { to: "/", label: "Início" },
@@ -19,8 +20,8 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold text-primary">
-          <Shell className="h-6 w-6" />
-          Guia do Hóspede
+          <img src={logo} alt="Feito Maré" className="h-10 w-10 rounded-full" />
+          Feito Maré
         </Link>
 
         {/* Desktop nav */}
