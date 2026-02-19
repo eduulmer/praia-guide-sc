@@ -10,11 +10,11 @@ import restLanchonete from "@/assets/rest-lanchonete.jpg";
 
 const restaurants = [
   { name: "Restaurante Raízes", type: "Frutos do Mar", desc: "Especialidade: comida caseira e açoriana (peixes e frutos do mar)", price: "$$", rating: 5, image: restMuseu },
-  { name: "Palmas Steakhouse", type: "Churrascaria, sul-americana", desc: "Churrasco de qualidade e carnes bem preparadas,Vista e ambiente confortável — ideal para noites especiais.", price: "$$", rating: 4, image: restAcoriano },
-  { name: "Illa Gastrobar", type: "Bar, café, contemporâneo", desc: "Vista imperdível — fácil de acessar do centro,Cardápio variado e coquetéis bem feitos.", price: "$$$", rating: 5, image: restBaia },
+  { name: "Palmas Steakhouse", type: "Churrascaria, sul-americana", desc: "Churrasco de qualidade e carnes bem preparadas, vista e ambiente confortável — ideal para noites especiais.", price: "$$", rating: 4, image: restAcoriano },
+  { name: "Illa Gastrobar", type: "Bar, café, contemporâneo", desc: "Vista imperdível — fácil de acessar do centro, cardápio variado e coquetéis bem feitos.", price: "$$$", rating: 5, image: restBaia },
   { name: "La Bonna Pizza", type: "Pizzaria", desc: "Rodízio de pizza — bem gostoso e com bom custo-benefício, ótima opção para famílias e grupos.", price: "$", rating: 4, image: restPizzaria },
-  { name: "Pomodori Praia", type: "Italiana, brasileira", desc: "Localização privilegiada na Praia Grande — pé na rua principal,Cardápio: massas, pizzas e pratos brasileiros.", price: "$$$", rating: 5, image: restBistro },
-  { name: "Restaurante do Edu", type: "Frutos do mar, brasileira", desc: "Mesas pé na areia (ambiente aberto) + área climatizada, Mar calmo ideal para brincar; cães permitidos na área externa.", price: "$", rating: 4, image: restLanchonete },
+  { name: "Pomodori Praia", type: "Italiana, brasileira", desc: "Localização privilegiada na Praia Grande — pé na rua principal, cardápio: massas, pizzas e pratos brasileiros.", price: "$$$", rating: 5, image: restBistro },
+  { name: "Restaurante do Edu", type: "Frutos do mar, brasileira", desc: "Mesas pé na areia (ambiente aberto) + área climatizada, mar calmo ideal para brincar; cães permitidos na área externa.", price: "$", rating: 4, image: restLanchonete },
 ];
 
 const RestaurantesPage = () => (
