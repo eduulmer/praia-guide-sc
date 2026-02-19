@@ -14,7 +14,7 @@ const beaches = [
   { name: "Praia de Ganchos de Fora", desc: "Praia tranquila com águas cristalinas, perfeita para quem busca sossego e contato com a natureza.", distance: "8 min", rating: 4, image: beachGanchos },
   { name: "Praia do Antenor", desc: "Pequena e reservada, ideal para mergulho com snorkel e apreciar a vida marinha local.", distance: "12 min", rating: 4, image: beachAntenor },
   { name: "Praia de Calheiros", desc: "Praia preservada com visual incrível. Acesso por trilha curta, vale cada passo!", distance: "15 min", rating: 5, image: beachCalheiros },
-  { name: "Praia da Costeira", desc: "Mar calmo e areia fofa. Boa opção para crianças e dias de sol com toda a família.", distance: "7 min", rating: 4, image: beachCosteira },
+  { name: "Praia do Marcelo (ou Praia do Funil)", desc:"Prainha pequena e bem “cantinho escondido” em Canto dos Ganchos; você pode ver os dois nomes para o mesmo lugar.", distance: "7 min", rating: 4, image: beachCosteira },
 ];
 
 const PraiasPage = () => (
