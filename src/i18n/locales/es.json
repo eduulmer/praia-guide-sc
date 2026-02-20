@@ -33,17 +33,37 @@
     "welcomeDesc": "Preparamos esta guía con cariño para que tengas la mejor experiencia posible en Governador Celso Ramos. Aquí encontrarás consejos de playas, restaurantes, paseos y todo lo que necesitas saber para aprovechar al máximo tu estadía con nosotros."
   },
   "rules": {
-    "pageTitle": "Reglas de la Casa",
-    "pageSubtitle": "Para garantizar una estadía agradable para todos, les pedimos que sigan estas orientaciones",
-    "checkin": { "title": "Check-in y Check-out", "desc": "Check-in a partir de las 15h y check-out hasta las 11h. Horarios diferentes pueden combinarse con antelación." },
-    "silence": { "title": "Silencio", "desc": "Respete el horario de silencio de 22h a 8h. Los sonidos altos molestan a vecinos y otros huéspedes." },
-    "guests": { "title": "Número de Huéspedes", "desc": "Respete el número máximo de huéspedes informado en la reserva. Visitantes extras deben ser comunicados." },
-    "smoking": { "title": "Prohibido Fumar", "desc": "No está permitido fumar dentro del inmueble. Use las áreas externas y descarte colillas adecuadamente." },
-    "pets": { "title": "Mascotas", "desc": "Consulte antes de traer mascotas. Cuando estén permitidas, mantenga la limpieza y cuide de no molestar a los vecinos." },
-    "trash": { "title": "Basura y Limpieza", "desc": "Separe la basura reciclable de la orgánica. Deje el inmueble organizado al salir. Las bolsas de basura están en la cocina." },
-    "parking": { "title": "Estacionamiento", "desc": "Use solo los espacios designados para el inmueble. No bloquee la entrada de otros residentes." },
-    "security": { "title": "Seguridad", "desc": "Mantenga puertas y ventanas cerradas al salir. En caso de emergencia, llame al número informado en el check-in." }
+  "pageTitle": "Reglas de la Casa",
+  "pageSubtitle": "Información importante para tu estadía",
+  "silence": {
+    "title": "Horas de Silencio",
+    "desc": "Respeta el horario de silencio entre las 22h y las 8h. Las fiestas y el ruido excesivo no están permitidos."
   },
+  "guests": {
+    "title": "Huéspedes",
+    "desc": "El número máximo de huéspedes es el especificado en la reserva. No se permite traer personas adicionales sin autorización."
+  },
+  "smoking": {
+    "title": "Prohibido Fumar",
+    "desc": "Fumar no está permitido dentro de la casa. Puedes fumar en el área externa, respetando a los vecinos."
+  },
+  "pets": {
+    "title": "Animales de Compañía",
+    "desc": "No se permiten animales de compañía en la propiedad."
+  },
+  "trash": {
+    "title": "Basura y Limpieza",
+    "desc": "Deja la casa limpia y organiza la basura correctamente. Utiliza los contenedores proporcionados."
+  },
+  "parking": {
+    "title": "Estacionamiento",
+    "desc": "Utiliza solo la plaza de estacionamiento reservada para tu propiedad. El estacionamiento en la calle está prohibido."
+  },
+  "security": {
+    "title": "Seguridad",
+    "desc": "Ambiente monitorado con cámaras para tu seguridad y protección de la propiedad."
+  }
+},
   "beaches": {
     "pageTitle": "Mejores Playas",
     "pageSubtitle": "Governador Celso Ramos está rodeada de playas increíbles. ¡Descubre nuestras recomendaciones!",
