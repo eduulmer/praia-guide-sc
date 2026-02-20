@@ -77,7 +77,7 @@ const tours: Tour[] = [
   {
     icon: <Footprints className="h-5 w-5" />,
     name: "Trilha para a Praia do Sissial",
-    desc: "Praia preservada e cercada de mata, acessada por trilha; ótima para quem quer um lugar mais "raiz".",
+    desc: "Praia preservada e cercada de mata, acessada por trilha; ótima para quem quer um lugar mais raiz.",
     perfil: "Trilha",
     duracao: "1h a 2h (ida e volta, varia no ritmo)",
     modalidade: "Livre (sem guia)",
