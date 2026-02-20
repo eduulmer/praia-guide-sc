@@ -1,17 +1,16 @@
-import { ShieldCheck, Volume2, Clock, Cigarette, Dog, Trash2, Car, Users } from "lucide-react";
+import { Volume2, Cigarette, Dog, Trash2, Car, Users, Camera } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
 
 const ruleKeys = [
-  { icon: <Clock className="h-5 w-5" />, key: "checkin" },
   { icon: <Volume2 className="h-5 w-5" />, key: "silence" },
   { icon: <Users className="h-5 w-5" />, key: "guests" },
   { icon: <Cigarette className="h-5 w-5" />, key: "smoking" },
   { icon: <Dog className="h-5 w-5" />, key: "pets" },
   { icon: <Trash2 className="h-5 w-5" />, key: "trash" },
   { icon: <Car className="h-5 w-5" />, key: "parking" },
-  { icon: <ShieldCheck className="h-5 w-5" />, key: "security" },
+  { icon: <Camera className="h-5 w-5" />, key: "security" },
 ];
 
 const RegrasPage = () => {
