@@ -1,4 +1,4 @@
-import { Ship, Footprints, MapPin, ExternalLink } from "lucide-react";
+import { Ship, Footprints, MapPin, Instagram, ExternalLink } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
 import toursThumb from "@/assets/tours-thumb.jpg";
@@ -19,6 +19,7 @@ type Tour = {
 
   mapsQuery?: string;
   mapsUrl?: string;
+  instagram?: string;
 };
 
 function mapsSearchUrl(query?: string) {
@@ -39,7 +40,7 @@ const tours: Tour[] = [
     duracao: "Meio período (varia por roteiro)",
     modalidade: "Compartilhado",
     idealPara: ["História", "Fotos", "Natureza"],
-    mapsQuery: "Ilha de Anhatomirim Fortaleza de Santa Cruz SC",
+    instagram: "@penaaguapasseios",
   },
   {
     icon: <Ship className="h-5 w-5" />,
@@ -49,7 +50,7 @@ const tours: Tour[] = [
     duracao: "3h a 4h (varia por roteiro)",
     modalidade: "Compartilhado",
     idealPara: ["Famílias", "Fotos", "Natureza"],
-    mapsQuery: "Passeio Barco Pirata Governador Celso Ramos SC",
+    instagram: "@penaaguapasseios",
   },
   {
     icon: <Ship className="h-5 w-5" />,
@@ -59,7 +60,7 @@ const tours: Tour[] = [
     duracao: "1h30 a meio período (varia por roteiro)",
     modalidade: "Compartilhado",
     idealPara: ["Golfinhos", "Natureza", "Fotos"],
-    mapsQuery: "Baía dos Golfinhos Governador Celso Ramos SC",
+    instagram: "@penaaguapasseios",
   },
 
   // Trilhas
@@ -71,14 +72,14 @@ const tours: Tour[] = [
     duracao: "1h a 2h (ida e volta, varia no ritmo)",
     modalidade: "Livre (sem guia)",
     idealPara: ["Natureza", "Fotos", "Sossego"],
-    mapsQuery: "Praia de Fora Governador Celso Ramos SC",
+    mapsUrl: "https://www.google.com/maps/place/Trilha+Praia+de+Fora/@-27.3024557,-48.5609758,15z/data=!4m10!1m2!2m1!1sPraia+de+Fora+Governador+Celso+Ramos+SC!3m6!1s0x9527599da9eff5e3:0x404db5906a4c60a0!8m2!3d-27.3024563!4d-48.5419204!15sCidQcmFpYSBkZSBGb3JhIEdvdmVybmFkb3IgQ2Vsc28gUmFtb3MgU0NaKSIncHJhaWEgZGUgZm9yYSBnb3Zlcm5hZG9yIGNlbHNvIHJhbW9zIHNjkgELaGlraW5nX2FyZWGaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnBhTkZaWVZYZFVNVlpSVkVaUmVWSnJaRTVUYTNSVVUyeEdUVkZYWXhBQuABAPoBBAhEEEc!16s%2Fg%2F11fj5nw7y2?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D",
   },
   {
     icon: <Footprints className="h-5 w-5" />,
     name: "Trilha para a Praia do Sissial",
-    desc: "Praia preservada e cercada de mata, acessada por trilha; ótima para quem quer um lugar mais “raiz”.",
+    desc: "Praia preservada e cercada de mata, acessada por trilha; ótima para quem quer um lugar mais "raiz".",
     perfil: "Trilha",
-    duracao: "2h a 3h (ida e volta, varia no ritmo)",
+    duracao: "1h a 2h (ida e volta, varia no ritmo)",
     modalidade: "Livre (sem guia)",
     idealPara: ["Natureza", "Sossego", "Fotos"],
     mapsQuery: "Praia do Sissial Governador Celso Ramos SC",
@@ -88,7 +89,7 @@ const tours: Tour[] = [
     name: "Trilha para a Praia das Conchas",
     desc: "Trilha famosa por levar a uma praia diferente, com muitas conchas; caminho passa por trechos de costão e pequenas prainhas.",
     perfil: "Trilha",
-    duracao: "2h a 3h (ida e volta, varia no ritmo)",
+    duracao: "1h a 2h (ida e volta, varia no ritmo)",
     modalidade: "Livre (sem guia)",
     idealPara: ["Fotos", "Natureza", "Sossego"],
     mapsQuery: "Praia das Conchas Governador Celso Ramos SC",
@@ -106,7 +107,12 @@ const PasseiosPage = () => (
       <div className="container">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tours.map((t, i) => {
-            const gmaps = t.mapsUrl || mapsSearchUrl(t.mapsQuery);
+            const gmaps = t.mapsUrl || (t.mapsQuery ? mapsSearchUrl(t.mapsQuery) : undefined);
+            const igUrl = t.instagram
+              ? t.instagram.startsWith("http")
+                ? t.instagram
+                : `https://www.instagram.com/${t.instagram.replace("@", "")}`
+              : undefined;
 
             return (
               <div
@@ -153,19 +159,35 @@ const PasseiosPage = () => (
                     ))}
                   </div>
 
-                  {gmaps && (
-                    <div className="mt-4 pt-3 border-t border-border">
-                      <a
-                        href={gmaps}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
-                        aria-label={`Abrir ${t.name} no Google Maps`}
-                      >
-                        <MapPin className="h-4 w-4" />
-                        Ver no mapa
-                        <ExternalLink className="h-3.5 w-3.5 opacity-70" />
-                      </a>
+                  {(gmaps || igUrl) && (
+                    <div className="mt-4 pt-3 border-t border-border flex gap-2">
+                      {gmaps && (
+                        <a
+                          href={gmaps}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
+                          aria-label={`Abrir ${t.name} no Google Maps`}
+                        >
+                          <MapPin className="h-4 w-4" />
+                          Ver no mapa
+                          <ExternalLink className="h-3.5 w-3.5 opacity-70" />
+                        </a>
+                      )}
+
+                      {igUrl && (
+                        <a
+                          href={igUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
+                          aria-label={`Abrir Instagram do ${t.name}`}
+                        >
+                          <Instagram className="h-4 w-4" />
+                          Instagram
+                          <ExternalLink className="h-3.5 w-3.5 opacity-70" />
+                        </a>
+                      )}
                     </div>
                   )}
                 </div>
