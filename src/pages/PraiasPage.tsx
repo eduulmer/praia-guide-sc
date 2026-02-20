@@ -44,7 +44,7 @@ function estruturaBadgeClass(level: InfraLevel) {
       return "bg-amber-500/15 text-amber-300 border-amber-500/25";
     case "Pouca estrutura":
     default:
-      return "bg-slate-200/15 text-slate-100 border-slate-200/30";
+      return "bg-slate-500/20 text-slate-200 border-slate-500/40";
   }
 }
 
@@ -119,7 +119,7 @@ const beaches: Beach[] = [
     acesso: "Trilha curta",
     mar: "Moderado",
     estacionamento: "Limitado",
-    idealPara: ["Sossego"],
+    idealPara: ["Sossego", "Famílias"],
     mapsQuery: "Praia de Calheiros Governador Celso Ramos SC",
   },
   {
@@ -130,7 +130,7 @@ const beaches: Beach[] = [
     acesso: "Trilha curta",
     mar: "Calmo",
     estacionamento: "Difícil",
-    idealPara: ["Sossego", "Snorkel"],
+    idealPara: ["Sossego", "Snorkel", "Famílias"],
     mapsQuery: "Praia do Marcelo Governador Celso Ramos SC",
   },
 ];
