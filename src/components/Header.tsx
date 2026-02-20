@@ -9,7 +9,7 @@ const navItems = [
 { to: "/praias", label: "Praias" },
 { to: "/restaurantes", label: "Restaurantes" },
 { to: "/passeios", label: "Passeios" },
-{ to: "/parceiros", label: "Parceiros" }];
+{ to: "/Hospedagem", label: "Hospedagem" }];
 
 
 const Header = () => {
