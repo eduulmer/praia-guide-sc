@@ -32,18 +32,38 @@
     "welcomeTitle": "Welcome to Feito Maré House! 🏖️",
     "welcomeDesc": "We prepared this guide with care so you can have the best possible experience in Governador Celso Ramos. Here you'll find tips on beaches, restaurants, tours, and everything you need to know to make the most of your stay with us."
   },
-  "rules": {
-    "pageTitle": "House Rules",
-    "pageSubtitle": "To ensure a pleasant stay for everyone, we ask that you follow these guidelines",
-    "checkin": { "title": "Check-in & Check-out", "desc": "Check-in from 3 PM and check-out by 11 AM. Different times can be arranged in advance." },
-    "silence": { "title": "Quiet Hours", "desc": "Please respect quiet hours from 10 PM to 8 AM. Loud sounds disturb neighbors and other guests." },
-    "guests": { "title": "Number of Guests", "desc": "Please respect the maximum number of guests informed in the reservation. Extra visitors must be communicated." },
-    "smoking": { "title": "No Smoking", "desc": "Smoking is not allowed inside the property. Use outdoor areas and dispose of cigarette butts properly." },
-    "pets": { "title": "Pets", "desc": "Please ask before bringing pets. When allowed, maintain cleanliness and make sure not to disturb neighbors." },
-    "trash": { "title": "Trash & Cleaning", "desc": "Separate recyclable from organic waste. Leave the property tidy when leaving. Trash bags are available in the kitchen." },
-    "parking": { "title": "Parking", "desc": "Use only the parking spaces designated for the property. Do not block the entrance of other residents." },
-    "security": { "title": "Security", "desc": "Keep doors and windows locked when leaving. In case of emergency, call the number provided at check-in." }
+ "rules": {
+  "pageTitle": "House Rules",
+  "pageSubtitle": "Important information for your stay",
+  "silence": {
+    "title": "Quiet Hours",
+    "desc": "Respect quiet hours between 10 PM and 8 AM. Parties and excessive noise are not allowed."
   },
+  "guests": {
+    "title": "Guests",
+    "desc": "The maximum number of guests is as stated in the reservation. You cannot bring extra people without authorization."
+  },
+  "smoking": {
+    "title": "No Smoking",
+    "desc": "Smoking is not allowed inside the house. You may smoke in the outdoor area, respecting neighbors."
+  },
+  "pets": {
+    "title": "Pets",
+    "desc": "Pets are not allowed in the property."
+  },
+  "trash": {
+    "title": "Trash and Cleaning",
+    "desc": "Leave the house clean and dispose of trash properly. Use the provided trash bins."
+  },
+  "parking": {
+    "title": "Parking",
+    "desc": "Use only the parking space reserved for your property. Street parking is prohibited."
+  },
+  "security": {
+    "title": "Security",
+    "desc": "Monitored environment with cameras for your safety and property protection."
+  }
+},
   "beaches": {
     "pageTitle": "Best Beaches",
     "pageSubtitle": "Governador Celso Ramos is surrounded by incredible beaches. Check out our recommendations!",
