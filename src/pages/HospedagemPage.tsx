@@ -1,4 +1,4 @@
-import { Home, Users, DoorOpen, ParkingCircle, Wifi, MapPin, Phone, MessageCircle } from "lucide-react";
+import { Home, Users, DoorOpen, ParkingCircle, Wifi, MapPin, Phone, MessageCircle, ExternalLink } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
 
@@ -18,14 +18,12 @@ type Hospedagem = {
   ocupacao: number;
   garagem: number;
 
-  precoDiaria: string;
-  precoLimpeza: string;
-
   destaque: string[];
   amenities: string[];
   
   whatsapp?: string;
   telefone?: string;
+  site?: string; // Novo: link do site/admiranda
   endereco: string;
 };
 
@@ -45,9 +43,6 @@ const hospedagens: Hospedagem[] = [
     ocupacao: 4,
     garagem: 1,
 
-    precoDiaria: "R$ 450 a R$ 550",
-    precoLimpeza: "R$ 250",
-
     destaque: ["Ar Condicionado", "Frente para o Mar", "Internet", "Litoral", "Quintal"],
     amenities: [
       "Churrasqueira",
@@ -65,6 +60,7 @@ const hospedagens: Hospedagem[] = [
 
     whatsapp: "(48) 3262-9282",
     telefone: "(48) 3262-9282",
+    site: "https://admiranda.com.br/imoveis/imoveis/detalhe-do-imovel/cod-166-casa-locacao-in7/",
     endereco: "Rua Luiz Alexandrino Silva, 894 - Apto 01 - Camboa da Armação",
   },
   {
@@ -77,9 +73,6 @@ const hospedagens: Hospedagem[] = [
     banheiros: 2,
     ocupacao: 4,
     garagem: 1,
-
-    precoDiaria: "R$ 500 a R$ 750",
-    precoLimpeza: "R$ 250",
 
     destaque: ["Ar Condicionado", "Frente para o Mar", "Internet", "Lavabo", "Churrasqueira"],
     amenities: [
@@ -100,6 +93,7 @@ const hospedagens: Hospedagem[] = [
 
     whatsapp: "(48) 3262-9282",
     telefone: "(48) 3262-9282",
+    site: "https://admiranda.com.br/imoveis/imoveis/detalhe-do-imovel/cod-166-002-casa-temporada/",
     endereco: "Rua Luiz Alexandrino Silva, 894 - Apto 02 - Camboa da Armação",
   },
   {
@@ -112,9 +106,6 @@ const hospedagens: Hospedagem[] = [
     banheiros: 1,
     ocupacao: 4,
     garagem: 1,
-
-    precoDiaria: "R$ 400 a R$ 550",
-    precoLimpeza: "R$ 250",
 
     destaque: ["Ar Condicionado", "Frente para o Mar", "Internet", "Litoral"],
     amenities: [
@@ -133,6 +124,7 @@ const hospedagens: Hospedagem[] = [
 
     whatsapp: "(48) 3262-9282",
     telefone: "(48) 3262-9282",
+    site: "https://admiranda.com.br/imoveis/imoveis/detalhe-do-imovel/cod-166-apto-03-temporada/",
     endereco: "Rua Luiz Alexandrino Silva, 894 - Apto 03 - Camboa da Armação",
   },
 ];
@@ -201,15 +193,6 @@ const HospedagensPage = () => (
                     </div>
                   </div>
 
-                  {/* Preço */}
-                  <div className="mb-4 p-3 bg-muted/30 rounded-lg border border-border">
-                    <div className="text-xs text-muted-foreground mb-1">Diária</div>
-                    <div className="font-semibold text-foreground">{h.precoDiaria}</div>
-                    <div className="text-xs text-muted-foreground mt-1">
-                      Taxa de limpeza: {h.precoLimpeza}
-                    </div>
-                  </div>
-
                   {/* Destaques */}
                   <div className="mb-4">
                     <div className="text-xs font-semibold text-muted-foreground mb-2">
@@ -242,6 +225,18 @@ const HospedagensPage = () => (
 
                 {/* Contato */}
                 <div className="border-t border-border pt-4 flex gap-2">
+                  {h.site && (
+                    <a
+                      href={h.site}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex items-center justify-center gap-2 rounded-md border border-border px-3 py-2 text-xs font-medium text-primary hover:bg-muted transition-colors"
+                      aria-label={`Ver detalhes de ${h.nome}`}
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Ver mais
+                    </a>
+                  )}
                   {h.whatsapp && (
                     <a
                       href={`https://api.whatsapp.com/send?phone=55${h.whatsapp.replace(/\D/g, "")}`}
