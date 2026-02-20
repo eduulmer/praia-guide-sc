@@ -44,7 +44,7 @@ function estruturaBadgeClass(level: InfraLevel) {
       return "bg-amber-500/15 text-amber-300 border-amber-500/25";
     case "Pouca estrutura":
     default:
-      return "bg-slate-500/15 text-slate-200 border-slate-500/25";
+      return "bg-slate-200/15 text-slate-100 border-slate-200/30";
   }
 }
 
