@@ -24,36 +24,26 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install dependencies
+      - name: Install
         run: npm install --legacy-peer-deps
 
       - name: Build
         run: npm run build
 
-- name: Debug dist index
-  run: |
-    ls -la dist
-    echo "---- dist/index.html (head) ----"
-    sed -n '1,80p' dist/index.html
+      - name: Debug dist index
+        run: |
+          ls -la dist
+          echo "---- dist/index.html (head) ----"
+          sed -n '1,80p' dist/index.html
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
-    # IMPORTANTE: isso é obrigatório pro deploy-pages@v4
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v4
