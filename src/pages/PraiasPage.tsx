@@ -1,6 +1,7 @@
-import { MapPin, Star } from "lucide-react";
+import { MapPin, ExternalLink, Waves, Footprints } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
+
 import beachPalmas from "@/assets/beach-palmas.jpg";
 import beachArmacao from "@/assets/beach-armacao.jpg";
 import beachGanchos from "@/assets/beach-ganchos.jpg";
@@ -8,13 +9,99 @@ import beachAntenor from "@/assets/beach-antenor.jpg";
 import beachCalheiros from "@/assets/beach-calheiros.jpg";
 import beachCosteira from "@/assets/beach-marcelo.jpg";
 
-const beaches = [
-  { name: "Praia de Palmas", desc: "A mais popular da região, com águas calmas e boa infraestrutura de quiosques e restaurantes. Ideal para famílias.", distance: "5 min", rating: 5, image: beachPalmas },
-  { name: "Praia da Armação da Piedade", desc: "Charmosa praia de pescadores com vista para a Ilha de Anhatomirim. Ótima para fotos e pôr do sol.", distance: "10 min", rating: 5, image: beachArmacao },
-  { name: "Praia de Ganchos de Fora", desc: "Praia tranquila com águas cristalinas, perfeita para quem busca sossego e contato com a natureza.", distance: "8 min", rating: 4, image: beachGanchos },
-  { name: "Praia do Antenor", desc: "Pequena e reservada, ideal para mergulho com snorkel e apreciar a vida marinha local.", distance: "12 min", rating: 4, image: beachAntenor },
-  { name: "Praia de Calheiros", desc: "Praia preservada com visual incrível. Acesso por trilha curta, vale cada passo!", distance: "15 min", rating: 5, image: beachCalheiros },
-  { name: "Praia do Marcelo (ou Praia do Funil)", desc:"Prainha pequena e bem “cantinho escondido” em Canto dos Ganchos; você pode ver os dois nomes para o mesmo lugar.", distance: "7 min", rating: 4, image: beachCosteira },
+type InfraLevel = "Sem estrutura" | "Média" | "Alta";
+type AccessLevel = "Fácil" | "Trilha curta" | "Trilha" | "Escadas" | "Moderado";
+type SeaProfile = "Calmo" | "Moderado" | "Ondas";
+
+type Beach = {
+  name: string;
+  desc: string;
+  image: string;
+
+  infra: InfraLevel;
+  acesso: AccessLevel;
+  mar: SeaProfile;
+
+  mapsUrl?: string;
+  mapsQuery?: string;
+};
+
+function mapsSearchUrl(query?: string) {
+  if (!query) return undefined;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
+function infraBadgeClass(level: InfraLevel) {
+  switch (level) {
+    case "Alta":
+      return "bg-emerald-500/15 text-emerald-300 border-emerald-500/25";
+    case "Média":
+      return "bg-amber-500/15 text-amber-300 border-amber-500/25";
+    case "Sem estrutura":
+    default:
+      return "bg-slate-500/15 text-slate-200 border-slate-500/25";
+  }
+}
+
+function chipClass() {
+  return "inline-flex items-center gap-1.5 rounded-full border border-border bg-muted/40 px-2.5 py-1 text-[11px] font-semibold text-foreground";
+}
+
+const beaches: Beach[] = [
+  {
+    name: "Praia de Palmas",
+    desc: "A mais popular da região, com águas calmas e boa infraestrutura de quiosques e restaurantes. Ideal para famílias.",
+    image: beachPalmas,
+    infra: "Alta",
+    acesso: "Fácil",
+    mar: "Calmo",
+    mapsQuery: "Praia de Palmas Governador Celso Ramos SC",
+  },
+  {
+    name: "Praia da Armação da Piedade",
+    desc: "Charmosa praia de pescadores com vista para a Ilha de Anhatomirim. Ótima para fotos e pôr do sol.",
+    image: beachArmacao,
+    infra: "Média",
+    acesso: "Fácil",
+    mar: "Moderado",
+    mapsQuery: "Praia da Armação da Piedade Governador Celso Ramos SC",
+  },
+  {
+    name: "Praia de Ganchos de Fora",
+    desc: "Praia tranquila com águas cristalinas, perfeita para quem busca sossego e contato com a natureza.",
+    image: beachGanchos,
+    infra: "Média",
+    acesso: "Fácil",
+    mar: "Moderado",
+    mapsQuery: "Praia de Ganchos de Fora Governador Celso Ramos SC",
+  },
+  {
+    name: "Praia do Antenor",
+    desc: "Pequena e reservada, ideal para mergulho com snorkel e apreciar a vida marinha local.",
+    image: beachAntenor,
+    infra: "Sem estrutura",
+    acesso: "Trilha curta",
+    mar: "Calmo",
+    mapsQuery: "Praia do Antenor Governador Celso Ramos SC",
+  },
+  {
+    name: "Praia de Calheiros",
+    desc: "Praia preservada com visual incrível. Acesso por trilha curta, vale cada passo!",
+    image: beachCalheiros,
+    infra: "Sem estrutura",
+    acesso: "Trilha curta",
+    mar: "Moderado",
+    mapsQuery: "Praia de Calheiros Governador Celso Ramos SC",
+  },
+  {
+    name: "Praia do Marcelo (ou Praia do Funil)",
+    desc: "Prainha pequena e bem “cantinho escondido” em Canto dos Ganchos; você pode ver os dois nomes para o mesmo lugar.",
+    image: beachCosteira,
+    infra: "Sem estrutura",
+    acesso: "Trilha curta",
+    mar: "Calmo",
+    mapsQuery: "Praia do Marcelo Governador Celso Ramos SC",
+  },
 ];
 
 const PraiasPage = () => (
@@ -23,36 +110,83 @@ const PraiasPage = () => (
       title="Melhores Praias"
       subtitle="Governador Celso Ramos é cercada por praias incríveis. Confira nossas recomendações!"
     />
+
     <section className="py-12">
       <div className="container">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {beaches.map((beach, i) => (
-            <div
-              key={i}
-              className="group bg-card rounded-lg border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-fade-in-up"
-              style={{ animationDelay: `${i * 0.1}s` }}
-            >
-              <div className="h-44 overflow-hidden">
-                <img src={beach.image} alt={beach.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-              </div>
-              <div className="p-5">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-display text-lg font-semibold text-foreground">{beach.name}</h3>
-                  <div className="flex items-center gap-1 text-coral text-xs">
-                    {Array.from({ length: beach.rating }).map((_, j) => (
-                      <Star key={j} className="h-3.5 w-3.5 fill-current" />
-                    ))}
+          {beaches.map((beach, i) => {
+            const gmaps = beach.mapsUrl || mapsSearchUrl(beach.mapsQuery);
+
+            return (
+              <div
+                key={i}
+                className="group bg-card rounded-lg border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-fade-in-up"
+                style={{ animationDelay: `${i * 0.1}s` }}
+              >
+                <div className="h-44 overflow-hidden">
+                  <img
+                    src={beach.image}
+                    alt={beach.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="p-5">
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <h3 className="font-display text-lg font-semibold text-foreground">
+                      {beach.name}
+                    </h3>
+
+                    <span
+                      className={[
+                        "shrink-0 inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold",
+                        infraBadgeClass(beach.infra),
+                      ].join(" ")}
+                      title="Nível de estrutura (quiosques, banheiros, comércio por perto)"
+                    >
+                      {beach.infra}
+                    </span>
                   </div>
-                </div>
-                <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{beach.desc}</p>
-                <div className="flex items-center gap-1 text-xs text-primary font-medium">
-                  <MapPin className="h-3.5 w-3.5" />
-                  ~{beach.distance} de carro
+
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                    {beach.desc}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className={chipClass()} title="Tipo de acesso">
+                      <Footprints className="h-3.5 w-3.5 opacity-80" />
+                      Acesso: {beach.acesso}
+                    </span>
+
+                    <span className={chipClass()} title="Perfil do mar (geralmente)">
+                      <Waves className="h-3.5 w-3.5 opacity-80" />
+                      Mar: {beach.mar}
+                    </span>
+                  </div>
+
+                  {gmaps && (
+                    <a
+                      href={gmaps}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-md border border-border px-3 py-2 text-xs hover:bg-muted transition-colors"
+                      aria-label={`Abrir ${beach.name} no Google Maps`}
+                    >
+                      <MapPin className="h-4 w-4" />
+                      Ver no mapa
+                      <ExternalLink className="h-3.5 w-3.5 opacity-70" />
+                    </a>
+                  )}
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
+
+        <p className="mt-6 text-xs text-muted-foreground">
+          Observação: “Mar” e “Acesso” são um guia geral e podem variar com maré/vento e condições do dia.
+        </p>
       </div>
     </section>
   </PageLayout>
