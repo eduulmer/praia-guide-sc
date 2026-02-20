@@ -6,7 +6,7 @@ import beachArmacao from "@/assets/beach-armacao.jpg";
 import beachGanchos from "@/assets/beach-ganchos.jpg";
 import beachAntenor from "@/assets/beach-antenor.jpg";
 import beachCalheiros from "@/assets/beach-calheiros.jpg";
-import beachCosteira from "@/assets/beach-costeira.jpg";
+import beachCosteira from "@/assets/beach-marcelo.jpg";
 
 const beaches = [
   { name: "Praia de Palmas", desc: "A mais popular da região, com águas calmas e boa infraestrutura de quiosques e restaurantes. Ideal para famílias.", distance: "5 min", rating: 5, image: beachPalmas },
