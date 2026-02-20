@@ -1,20 +1,23 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const navItems = [
-{ to: "/", label: "Início" },
-{ to: "/regras", label: "Regras" },
-{ to: "/praias", label: "Praias" },
-{ to: "/restaurantes", label: "Restaurantes" },
-{ to: "/passeios", label: "Passeios" },
-{ to: "/Hospedagem", label: "Hospedagem" }];
-
+  { to: "/", key: "home" },
+  { to: "/regras", key: "rules" },
+  { to: "/praias", key: "beaches" },
+  { to: "/restaurantes", key: "restaurants" },
+  { to: "/passeios", key: "tours" },
+  { to: "/Hospedagem", key: "accommodation" },
+] as const;
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   return (
     <header className="sticky top-0 z-50 bg-card/190 backdrop-blur-md border-b border-border">
@@ -26,52 +29,56 @@ const Header = () => {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
-          {navItems.map((item) =>
-          <Link
-            key={item.to}
-            to={item.to}
-            className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-            location.pathname === item.to ?
-            "bg-primary text-primary-foreground" :
-            "text-foreground/70 hover:text-foreground hover:bg-muted"}`
-            }>
-
-              {item.label}
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                location.pathname === item.to
+                  ? "bg-primary text-primary-foreground"
+                  : "text-foreground/70 hover:text-foreground hover:bg-muted"
+              }`}
+            >
+              {t(`nav.${item.key}`)}
             </Link>
-          )}
+          ))}
+          <LanguageSwitcher />
         </nav>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden p-2 text-foreground"
-          onClick={() => setOpen(!open)}
-          aria-label="Menu">
-
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="md:hidden flex items-center gap-1">
+          <LanguageSwitcher />
+          <button
+            className="p-2 text-foreground"
+            onClick={() => setOpen(!open)}
+            aria-label="Menu"
+          >
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile nav */}
-      {open &&
-      <nav className="md:hidden border-t border-border bg-card pb-4">
-          {navItems.map((item) =>
-        <Link
-          key={item.to}
-          to={item.to}
-          onClick={() => setOpen(false)}
-          className={`block px-6 py-3 text-sm font-medium transition-colors ${
-          location.pathname === item.to ?
-          "bg-primary/10 text-primary" :
-          "text-foreground/70 hover:bg-muted"}`
-          }>
-
-              {item.label}
+      {open && (
+        <nav className="md:hidden border-t border-border bg-card pb-4">
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              onClick={() => setOpen(false)}
+              className={`block px-6 py-3 text-sm font-medium transition-colors ${
+                location.pathname === item.to
+                  ? "bg-primary/10 text-primary"
+                  : "text-foreground/70 hover:bg-muted"
+              }`}
+            >
+              {t(`nav.${item.key}`)}
             </Link>
-        )}
+          ))}
         </nav>
-      }
-    </header>);
-
+      )}
+    </header>
+  );
 };
 
 export default Header;
