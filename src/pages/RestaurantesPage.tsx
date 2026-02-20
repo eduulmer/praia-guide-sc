@@ -1,12 +1,12 @@
 import { Star } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
-import restRaizes from "@/assets/rest-museu.jpg";
-import restSteak from "@/assets/rest-acoriano.jpg";
-import restIlla from "@/assets/rest-baia.jpg";
-import restPizzaria from "@/assets/rest-pizzaria.jpg";
-import restPomodori from "@/assets/rest-bistro.jpg";
-import restEdu from "@/assets/rest-lanchonete.jpg";
+import restRaizes from "@/assets/restauranteraizes.jpg";
+import restSteak from "@/assets/restaurantesteak.jpg";
+import restIlla from "@/assets/restilla.jpg";
+import restPizzaria from "@/assets/restaurantepizza.jpg";
+import restPomodori from "@/assets/restaurantepomodori.jpg";
+import restEdu from "@/assets/restauranteedu.jpg";
 
 const restaurants = [
   { name: "Restaurante Raízes", type: "Frutos do Mar", desc: "Especialidade: comida caseira e açoriana (peixes e frutos do mar)", price: "$$", rating: 5, image: restRaizes },
