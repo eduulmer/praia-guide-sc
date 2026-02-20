@@ -8,7 +8,7 @@ import RegrasPage from "./pages/RegrasPage";
 import PraiasPage from "./pages/PraiasPage";
 import RestaurantesPage from "./pages/RestaurantesPage";
 import PasseiosPage from "./pages/PasseiosPage";
-import ParceirosPage from "./pages/HopedagemPage";
+import HospedagemPage from "./pages/HopedagemPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,7 +25,7 @@ const App = () => (
           <Route path="/praias" element={<PraiasPage />} />
           <Route path="/restaurantes" element={<RestaurantesPage />} />
           <Route path="/passeios" element={<PasseiosPage />} />
-          <Route path="/parceiros" element={<HospedagemPage />} />
+          <Route path="/Hospedagem" element={<HospedagemPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
