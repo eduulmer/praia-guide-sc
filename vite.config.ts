@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/praia-guide-sc/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,
