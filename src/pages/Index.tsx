@@ -57,11 +57,11 @@ const Index = () => {
               Regras da Casa
             </Link>
             <Link
-              to="/parceiros"
+              to="/hospedagem"
               className="inline-flex items-center gap-2 bg-card/90 text-foreground px-6 py-3 rounded-lg font-medium hover:bg-card transition-colors">
 
               <Handshake className="h-4 w-4" />
-              Parceiros Locais
+              Hospedagem
             </Link>
           </div>
         </div>
