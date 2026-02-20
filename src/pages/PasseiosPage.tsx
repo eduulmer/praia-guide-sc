@@ -1,7 +1,14 @@
 import { Ship, Footprints, MapPin, Instagram, ExternalLink } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
-import toursThumb from "@/assets/tours-thumb.jpg";
+
+// Importe aqui as imagens que você vai adicionar (ou deixe comentado por enquanto)
+// import tourAnhatomirim from "@/assets/tour-anhatomirim.jpg";
+// import tourBarcopirata from "@/assets/tour-barco-pirata.jpg";
+// import tourGolfinhos from "@/assets/tour-golfinhos.jpg";
+// import trilhaFora from "@/assets/trilha-praia-fora.jpg";
+// import trilhaSissial from "@/assets/trilha-sissial.jpg";
+// import trilhaConchas from "@/assets/trilha-conchas.jpg";
 
 type Perfil = "Barco" | "Trilha";
 type Modalidade = "Compartilhado" | "Privativo" | "Livre (sem guia)";
@@ -11,6 +18,7 @@ type Tour = {
   icon: React.ReactNode;
   name: string;
   desc: string;
+  image: string; // Novo: path da imagem
 
   perfil: Perfil;
   duracao: string;
@@ -36,6 +44,7 @@ const tours: Tour[] = [
     icon: <Ship className="h-5 w-5" />,
     name: "Tour Ilha de Anhatomirim (Fortaleza)",
     desc: "Passeio de barco com visita à Fortaleza de Santa Cruz e navegação por áreas lindas da baía.",
+    image: "tour-anhatomirim.jpg", // Nome que você vai usar
     perfil: "Barco",
     duracao: "Meio período (varia por roteiro)",
     modalidade: "Compartilhado",
@@ -46,6 +55,7 @@ const tours: Tour[] = [
     icon: <Ship className="h-5 w-5" />,
     name: "Passeio Barco Pirata",
     desc: "Passeio temático, divertido para ir com família/grupo; normalmente passa por pontos da região e pode incluir parada para banho (conforme roteiro do dia).",
+    image: "tour-barco-pirata.jpg", // Nome que você vai usar
     perfil: "Barco",
     duracao: "3h a 4h (varia por roteiro)",
     modalidade: "Compartilhado",
@@ -56,6 +66,7 @@ const tours: Tour[] = [
     icon: <Ship className="h-5 w-5" />,
     name: "Passeio Baía dos Golfinhos",
     desc: "Navegação pela baía com chance de avistamento; combine com Anhatomirim para um roteiro completo.",
+    image: "tour-golfinhos.jpg", // Nome que você vai usar
     perfil: "Barco",
     duracao: "1h30 a meio período (varia por roteiro)",
     modalidade: "Compartilhado",
@@ -68,6 +79,7 @@ const tours: Tour[] = [
     icon: <Footprints className="h-5 w-5" />,
     name: "Trilha para a Praia de Fora",
     desc: "Trilha com visual bonito e praia mais preservada; leve água e vá com calçado adequado.",
+    image: "trilha-praia-fora.jpg", // Nome que você vai usar
     perfil: "Trilha",
     duracao: "1h a 2h (ida e volta, varia no ritmo)",
     modalidade: "Livre (sem guia)",
@@ -77,9 +89,10 @@ const tours: Tour[] = [
   {
     icon: <Footprints className="h-5 w-5" />,
     name: "Trilha para a Praia do Sissial",
-    desc: "Praia preservada e cercada de mata, acessada por trilha; ótima para quem quer um lugar mais raiz.",
+    desc: 'Praia preservada e cercada de mata, acessada por trilha; ótima para quem quer um lugar mais "raiz".',
+    image: "trilha-sissial.jpg", // Nome que você vai usar
     perfil: "Trilha",
-    duracao: "1h a 2h (ida e volta, varia no ritmo)",
+    duracao: "2h a 3h (ida e volta, varia no ritmo)",
     modalidade: "Livre (sem guia)",
     idealPara: ["Natureza", "Sossego", "Fotos"],
     mapsQuery: "Praia do Sissial Governador Celso Ramos SC",
@@ -88,8 +101,9 @@ const tours: Tour[] = [
     icon: <Footprints className="h-5 w-5" />,
     name: "Trilha para a Praia das Conchas",
     desc: "Trilha famosa por levar a uma praia diferente, com muitas conchas; caminho passa por trechos de costão e pequenas prainhas.",
+    image: "trilha-conchas.jpg", // Nome que você vai usar
     perfil: "Trilha",
-    duracao: "1h a 2h (ida e volta, varia no ritmo)",
+    duracao: "2h a 3h (ida e volta, varia no ritmo)",
     modalidade: "Livre (sem guia)",
     idealPara: ["Fotos", "Natureza", "Sossego"],
     mapsQuery: "Praia das Conchas Governador Celso Ramos SC",
@@ -122,7 +136,7 @@ const PasseiosPage = () => (
               >
                 <div className="h-44 overflow-hidden">
                   <img
-                    src={toursThumb}
+                    src={new URL(`/src/assets/${t.image}`, import.meta.url).href}
                     alt={t.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
