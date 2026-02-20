@@ -1,0 +1,142 @@
+{
+  "langPopup": {
+    "title": "Welcome!",
+    "subtitle": "Choose your language",
+    "confirm": "Continue"
+  },
+  "nav": {
+    "home": "Home",
+    "rules": "Rules",
+    "beaches": "Beaches",
+    "restaurants": "Restaurants",
+    "tours": "Tours",
+    "accommodation": "Accommodation"
+  },
+  "footer": {
+    "brand": "Feito Maré",
+    "credit": "Governador Celso Ramos, SC by Eduardo Ulmer Schlichting"
+  },
+  "home": {
+    "heroTitle": "Guest Guide",
+    "heroDesc": "Governador Celso Ramos with over 40 beaches and preserved Azorean tradition. Home to approximately 100 dolphins, migratory whales, and one of the best diving spots in Brazil. The municipality combines sustainable tourism, authentic artisanal fishing, and a welcoming community.",
+    "btnRules": "House Rules",
+    "btnAccommodation": "Accommodation",
+    "exploreTitle": "Explore the Region",
+    "exploreSubtitle": "Our recommended places and experiences for your stay",
+    "sectionBeaches": "Best Beaches",
+    "sectionBeachesDesc": "Discover the most beautiful beaches in the region",
+    "sectionRestaurants": "Where to Eat",
+    "sectionRestaurantsDesc": "Must-try restaurants and seafood",
+    "sectionTours": "Tours",
+    "sectionToursDesc": "Adventures and experiences in the region",
+    "welcomeTitle": "Welcome to Feito Maré House! 🏖️",
+    "welcomeDesc": "We prepared this guide with care so you can have the best possible experience in Governador Celso Ramos. Here you'll find tips on beaches, restaurants, tours, and everything you need to know to make the most of your stay with us."
+  },
+  "rules": {
+    "pageTitle": "House Rules",
+    "pageSubtitle": "To ensure a pleasant stay for everyone, we ask that you follow these guidelines",
+    "checkin": { "title": "Check-in & Check-out", "desc": "Check-in from 3 PM and check-out by 11 AM. Different times can be arranged in advance." },
+    "silence": { "title": "Quiet Hours", "desc": "Please respect quiet hours from 10 PM to 8 AM. Loud sounds disturb neighbors and other guests." },
+    "guests": { "title": "Number of Guests", "desc": "Please respect the maximum number of guests informed in the reservation. Extra visitors must be communicated." },
+    "smoking": { "title": "No Smoking", "desc": "Smoking is not allowed inside the property. Use outdoor areas and dispose of cigarette butts properly." },
+    "pets": { "title": "Pets", "desc": "Please ask before bringing pets. When allowed, maintain cleanliness and make sure not to disturb neighbors." },
+    "trash": { "title": "Trash & Cleaning", "desc": "Separate recyclable from organic waste. Leave the property tidy when leaving. Trash bags are available in the kitchen." },
+    "parking": { "title": "Parking", "desc": "Use only the parking spaces designated for the property. Do not block the entrance of other residents." },
+    "security": { "title": "Security", "desc": "Keep doors and windows locked when leaving. In case of emergency, call the number provided at check-in." }
+  },
+  "beaches": {
+    "pageTitle": "Best Beaches",
+    "pageSubtitle": "Governador Celso Ramos is surrounded by incredible beaches. Check out our recommendations!",
+    "access": "Access",
+    "sea": "Sea",
+    "parkingLabel": "Parking",
+    "idealFor": "Ideal for",
+    "viewMap": "View on map",
+    "note": "Note: \"Sea\", \"Access\" and \"Parking\" are a general guide and may vary according to tide, wind and season.",
+    "infra": {
+      "high": "Well equipped",
+      "medium": "Some facilities",
+      "low": "Few facilities"
+    },
+    "accessLevel": { "easy": "Easy", "shortTrail": "Short trail", "trail": "Trail", "stairs": "Stairs", "moderate": "Moderate" },
+    "seaProfile": { "calm": "Calm", "moderate": "Moderate", "waves": "Waves" },
+    "parkingLevel": { "easy": "Easy", "limited": "Limited", "hard": "Difficult" },
+    "idealTags": { "families": "Families", "snorkel": "Snorkel", "sunset": "Sunset", "peace": "Quiet" },
+    "items": [
+      { "name": "Palmas Beach", "desc": "The most popular in the region, with calm waters and good infrastructure of kiosks and restaurants. Ideal for families." },
+      { "name": "Armação da Piedade Beach", "desc": "Charming fishing beach with a view of Anhatomirim Island. Great for photos and sunsets." },
+      { "name": "Ganchos de Fora Beach", "desc": "Quiet beach with crystal-clear waters, perfect for those seeking peace and contact with nature." },
+      { "name": "Antenor Beach", "desc": "Small and secluded, ideal for snorkeling and appreciating local marine life." },
+      { "name": "Calheiros Beach", "desc": "Preserved beach with incredible views. Access via a short trail, worth every step!" },
+      { "name": "Marcelo Beach (or Funil Beach)", "desc": "A small, hidden gem in Canto dos Ganchos; you may see both names for the same place." }
+    ]
+  },
+  "restaurants": {
+    "pageTitle": "Where to Eat",
+    "pageSubtitle": "The best restaurants and flavors of Governador Celso Ramos",
+    "viewMap": "View on map",
+    "instagram": "Instagram",
+    "reviewNote": "Reviews and price range: check on Google Maps.",
+    "tip": "Tip: to see ratings, reviews and updated price range, use \"View on map\".",
+    "items": [
+      { "name": "Restaurante Raízes", "type": "Seafood", "desc": "Specialty: homestyle and Azorean cuisine (fish and seafood)" },
+      { "name": "Palmas Steakhouse", "type": "Steakhouse, South American", "desc": "Quality barbecue and well-prepared meats, great view and comfortable atmosphere — ideal for special evenings." },
+      { "name": "Illa Gastrobar", "type": "Bar, café, contemporary", "desc": "Unmissable view — easy to access from downtown, varied menu and well-crafted cocktails." },
+      { "name": "La Bonna Pizza", "type": "Pizzeria", "desc": "All-you-can-eat pizza — very tasty and good value, great option for families and groups." },
+      { "name": "Pomodori Praia", "type": "Italian, Brazilian", "desc": "Prime location on Praia Grande — right on the main street, menu: pastas, pizzas and Brazilian dishes." },
+      { "name": "Restaurante do Edu", "type": "Seafood, Brazilian", "desc": "Tables on the sand (open environment) + air-conditioned area, calm sea ideal for kids; dogs allowed in the outdoor area." }
+    ]
+  },
+  "tours": {
+    "pageTitle": "Tours & Trails",
+    "pageSubtitle": "Tour ideas to enjoy Governador Celso Ramos — choose your style.",
+    "profile": "Type",
+    "duration": "Duration",
+    "idealFor": "Ideal for",
+    "viewMap": "View on map",
+    "instagram": "Instagram",
+    "tip": "Tip: on trails, bring water, wear closed shoes and avoid going alone. On boat tours, confirm the day's route and sea conditions.",
+    "profileTypes": { "boat": "Boat", "trail": "Trail" },
+    "modalityTypes": { "shared": "Shared", "private": "Private", "free": "Self-guided" },
+    "idealTags": { "families": "Families", "history": "History", "photos": "Photos", "nature": "Nature", "snorkel": "Snorkel", "peace": "Quiet", "dolphins": "Dolphins" },
+    "items": [
+      { "name": "Anhatomirim Island Tour (Fortress)", "desc": "Boat trip with a visit to the Santa Cruz Fortress and navigation through beautiful areas of the bay." },
+      { "name": "Pirate Ship Tour", "desc": "Themed tour, fun for families/groups; usually passes through points in the region and may include a swimming stop (depending on the day's route)." },
+      { "name": "Dolphin Bay Tour", "desc": "Bay navigation with a chance of sightings; combine with Anhatomirim for a complete itinerary." },
+      { "name": "Trail to Praia de Fora", "desc": "Trail with beautiful scenery and a more preserved beach; bring water and wear appropriate footwear." },
+      { "name": "Trail to Praia do Sissial", "desc": "Preserved beach surrounded by forest, accessed by trail; great for those who want a more authentic place." },
+      { "name": "Trail to Praia das Conchas", "desc": "Famous trail leading to a unique beach with many shells; the path passes through coastal stretches and small beaches." }
+    ]
+  },
+  "accommodation": {
+    "pageTitle": "Accommodation",
+    "pageSubtitle": "Three comfortable beachfront options in Governador Celso Ramos",
+    "code": "Code",
+    "rooms": "Bedroom(s)",
+    "upTo": "Up to",
+    "people": "guest(s)",
+    "bathrooms": "Bathroom(s)",
+    "parkingSpot": "Parking spot",
+    "highlights": "Highlights",
+    "amenities": "Amenities",
+    "viewMore": "View more",
+    "whatsapp": "WhatsApp",
+    "call": "Call",
+    "importantInfo": "Important information",
+    "minStay": "Minimum stay:",
+    "minStayValue": "10 days (5 days during Carnival)",
+    "location": "Location:",
+    "locationValue": "All units face the sea at Camboa da Armação Beach, in Governador Celso Ramos",
+    "rulesLabel": "Rules:",
+    "rulesValue": "No smoking, pets or parties allowed",
+    "obsLabel": "Note:",
+    "obsValue": "Accommodations do not include bed linen, towels, beach umbrellas or beach chairs",
+    "contactLabel": "Contact:",
+    "contactValue": "Check availability directly with the team at",
+    "items": [
+      { "name": "Apt 01 - Beachfront", "desc": "Perfect for couples or small groups. Located beachfront at Camboa Beach with stunning views and direct beach access." },
+      { "name": "Apt 02 - Premium (2 Bathrooms)", "desc": "Our most complete option! 2 bedrooms with 2 bathrooms. Ideal for families. Exclusive BBQ and premium comfort beachfront." },
+      { "name": "Apt 03 - Comfort", "desc": "2 cozy bedrooms, perfect for families who want space and comfort. Privileged beachfront location." }
+    ]
+  }
+}

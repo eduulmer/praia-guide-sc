@@ -1,0 +1,142 @@
+{
+  "langPopup": {
+    "title": "Bem-vindo!",
+    "subtitle": "Escolha seu idioma",
+    "confirm": "Continuar"
+  },
+  "nav": {
+    "home": "Início",
+    "rules": "Regras",
+    "beaches": "Praias",
+    "restaurants": "Restaurantes",
+    "tours": "Passeios",
+    "accommodation": "Hospedagem"
+  },
+  "footer": {
+    "brand": "Feito Maré",
+    "credit": "Governador Celso Ramos, SC by Eduardo Ulmer Schlichting"
+  },
+  "home": {
+    "heroTitle": "Guia do Hóspede",
+    "heroDesc": "Governador Celso Ramos com mais de 40 praias e tradição açoriana preservada. Lar de aproximadamente 100 golfinhos, baleias migratórias e um dos melhores pontos de mergulho do Brasil. O município combina turismo sustentável, pesca artesanal autêntica e uma comunidade receptiva",
+    "btnRules": "Regras da Casa",
+    "btnAccommodation": "Hospedagem",
+    "exploreTitle": "Explore a Região",
+    "exploreSubtitle": "Nossa recomendação lugares e experiências para sua estadia",
+    "sectionBeaches": "Melhores Praias",
+    "sectionBeachesDesc": "Descubra as praias mais bonitas da região",
+    "sectionRestaurants": "Onde Comer",
+    "sectionRestaurantsDesc": "Restaurantes e frutos do mar imperdíveis",
+    "sectionTours": "Passeios",
+    "sectionToursDesc": "Aventuras e experiências na região",
+    "welcomeTitle": "Bem-vindo à Feito Maré House! 🏖️",
+    "welcomeDesc": "Preparamos este guia com carinho para que você tenha a melhor experiência possível em Governador Celso Ramos. Aqui você encontra dicas de praias, restaurantes, passeios e tudo que precisa saber para aproveitar ao máximo sua estadia conosco."
+  },
+  "rules": {
+    "pageTitle": "Regras da Casa",
+    "pageSubtitle": "Para garantir uma estadia agradável para todos, pedimos que sigam estas orientações",
+    "checkin": { "title": "Check-in e Check-out", "desc": "Check-in a partir das 15h e check-out até as 11h. Horários diferentes podem ser combinados com antecedência." },
+    "silence": { "title": "Silêncio", "desc": "Respeite o horário de silêncio das 22h às 8h. Sons altos incomodam vizinhos e outros hóspedes." },
+    "guests": { "title": "Número de Hóspedes", "desc": "Respeite o número máximo de hóspedes informado na reserva. Visitantes extras devem ser comunicados." },
+    "smoking": { "title": "Proibido Fumar", "desc": "Não é permitido fumar dentro do imóvel. Utilize as áreas externas e descarte bitucas adequadamente." },
+    "pets": { "title": "Animais de Estimação", "desc": "Consulte antes de trazer pets. Quando permitidos, mantenha a limpeza e cuide para não incomodar vizinhos." },
+    "trash": { "title": "Lixo e Limpeza", "desc": "Separe o lixo reciclável do orgânico. Deixe o imóvel organizado ao sair. Sacos de lixo estão disponíveis na cozinha." },
+    "parking": { "title": "Estacionamento", "desc": "Utilize apenas as vagas designadas para o imóvel. Não bloqueie a entrada de outros moradores." },
+    "security": { "title": "Segurança", "desc": "Mantenha portas e janelas trancadas ao sair. Em caso de emergência, ligue para o número informado no check-in." }
+  },
+  "beaches": {
+    "pageTitle": "Melhores Praias",
+    "pageSubtitle": "Governador Celso Ramos é cercada por praias incríveis. Confira nossas recomendações!",
+    "access": "Acesso",
+    "sea": "Mar",
+    "parkingLabel": "Estac.",
+    "idealFor": "Ideal para",
+    "viewMap": "Ver no mapa",
+    "note": "Observação: \"Mar\", \"Acesso\" e \"Estacionamento\" são um guia geral e podem variar conforme maré, vento e temporada.",
+    "infra": {
+      "high": "Bastante estrutura",
+      "medium": "Média estrutura",
+      "low": "Pouca estrutura"
+    },
+    "accessLevel": { "easy": "Fácil", "shortTrail": "Trilha curta", "trail": "Trilha", "stairs": "Escadas", "moderate": "Moderado" },
+    "seaProfile": { "calm": "Calmo", "moderate": "Moderado", "waves": "Ondas" },
+    "parkingLevel": { "easy": "Fácil", "limited": "Limitado", "hard": "Difícil" },
+    "idealTags": { "families": "Famílias", "snorkel": "Snorkel", "sunset": "Pôr do sol", "peace": "Sossego" },
+    "items": [
+      { "name": "Praia de Palmas", "desc": "A mais popular da região, com águas calmas e boa infraestrutura de quiosques e restaurantes. Ideal para famílias." },
+      { "name": "Praia da Armação da Piedade", "desc": "Charmosa praia de pescadores com vista para a Ilha de Anhatomirim. Ótima para fotos e pôr do sol." },
+      { "name": "Praia de Ganchos de Fora", "desc": "Praia tranquila com águas cristalinas, perfeita para quem busca sossego e contato com a natureza." },
+      { "name": "Praia do Antenor", "desc": "Pequena e reservada, ideal para mergulho com snorkel e apreciar a vida marinha local." },
+      { "name": "Praia de Calheiros", "desc": "Praia preservada com visual incrível. Acesso por trilha curta, vale cada passo!" },
+      { "name": "Praia do Marcelo (ou Praia do Funil)", "desc": "Prainha pequena e bem \"cantinho escondido\" em Canto dos Ganchos; você pode ver os dois nomes para o mesmo lugar." }
+    ]
+  },
+  "restaurants": {
+    "pageTitle": "Onde Comer",
+    "pageSubtitle": "Os melhores restaurantes e sabores de Governador Celso Ramos",
+    "viewMap": "Ver no mapa",
+    "instagram": "Instagram",
+    "reviewNote": "Avaliações e faixa de preço: consulte no Google Maps.",
+    "tip": "Dica: para ver nota, comentários e faixa de preço atualizada, use \"Ver no mapa\".",
+    "items": [
+      { "name": "Restaurante Raízes", "type": "Frutos do Mar", "desc": "Especialidade: comida caseira e açoriana (peixes e frutos do mar)" },
+      { "name": "Palmas Steakhouse", "type": "Churrascaria, sul-americana", "desc": "Churrasco de qualidade e carnes bem preparadas, vista e ambiente confortável — ideal para noites especiais." },
+      { "name": "Illa Gastrobar", "type": "Bar, café, contemporâneo", "desc": "Vista imperdível — fácil de acessar do centro, cardápio variado e coquetéis bem feitos." },
+      { "name": "La Bonna Pizza", "type": "Pizzaria", "desc": "Rodízio de pizza — bem gostoso e com bom custo-benefício, ótima opção para famílias e grupos." },
+      { "name": "Pomodori Praia", "type": "Italiana, brasileira", "desc": "Localização privilegiada na Praia Grande — pé na rua principal, cardápio: massas, pizzas e pratos brasileiros." },
+      { "name": "Restaurante do Edu", "type": "Frutos do mar, brasileira", "desc": "Mesas pé na areia (ambiente aberto) + área climatizada, mar calmo ideal para brincar; cães permitidos na área externa." }
+    ]
+  },
+  "tours": {
+    "pageTitle": "Passeios & Trilhas",
+    "pageSubtitle": "Ideias de passeios para aproveitar Governador Celso Ramos — escolha o seu estilo.",
+    "profile": "Perfil",
+    "duration": "Duração",
+    "idealFor": "Ideal para",
+    "viewMap": "Ver no mapa",
+    "instagram": "Instagram",
+    "tip": "Dica: em trilhas, leve água, use calçado fechado e evite ir sozinho. Em passeios de barco, confirme o roteiro do dia e condições do mar.",
+    "profileTypes": { "boat": "Barco", "trail": "Trilha" },
+    "modalityTypes": { "shared": "Compartilhado", "private": "Privativo", "free": "Livre (sem guia)" },
+    "idealTags": { "families": "Famílias", "history": "História", "photos": "Fotos", "nature": "Natureza", "snorkel": "Snorkel", "peace": "Sossego", "dolphins": "Golfinhos" },
+    "items": [
+      { "name": "Tour Ilha de Anhatomirim (Fortaleza)", "desc": "Passeio de barco com visita à Fortaleza de Santa Cruz e navegação por áreas lindas da baía." },
+      { "name": "Passeio Barco Pirata", "desc": "Passeio temático, divertido para ir com família/grupo; normalmente passa por pontos da região e pode incluir parada para banho (conforme roteiro do dia)." },
+      { "name": "Passeio Baía dos Golfinhos", "desc": "Navegação pela baía com chance de avistamento; combine com Anhatomirim para um roteiro completo." },
+      { "name": "Trilha para a Praia de Fora", "desc": "Trilha com visual bonito e praia mais preservada; leve água e vá com calçado adequado." },
+      { "name": "Trilha para a Praia do Sissial", "desc": "Praia preservada e cercada de mata, acessada por trilha; ótima para quem quer um lugar mais \"raiz\"." },
+      { "name": "Trilha para a Praia das Conchas", "desc": "Trilha famosa por levar a uma praia diferente, com muitas conchas; caminho passa por trechos de costão e pequenas prainhas." }
+    ]
+  },
+  "accommodation": {
+    "pageTitle": "Hospedagens",
+    "pageSubtitle": "Três opções confortáveis frente ao mar em Governador Celso Ramos",
+    "code": "Código",
+    "rooms": "Quarto(s)",
+    "upTo": "Até",
+    "people": "pessoa(s)",
+    "bathrooms": "Banheiro(s)",
+    "parkingSpot": "Vaga",
+    "highlights": "Destaques",
+    "amenities": "Amenidades",
+    "viewMore": "Ver mais",
+    "whatsapp": "WhatsApp",
+    "call": "Ligar",
+    "importantInfo": "Informações importantes",
+    "minStay": "Mínimo de diárias:",
+    "minStayValue": "10 dias (5 dias no Carnaval)",
+    "location": "Localização:",
+    "locationValue": "Todas as unidades ficam frente ao mar da Praia da Camboa da Armação, em Governador Celso Ramos",
+    "rulesLabel": "Regras:",
+    "rulesValue": "Não é permitido fumar, animais de estimação ou festas",
+    "obsLabel": "Obs:",
+    "obsValue": "As hospedagens não incluem roupas de cama, mesa, banho, guarda-sol ou cadeiras de praia",
+    "contactLabel": "Contato:",
+    "contactValue": "Consulte disponibilidade diretamente com a equipe da",
+    "items": [
+      { "name": "Apto 01 - Frente ao Mar", "desc": "Perfeito para casais ou pequenos grupos. Localizado frente ao mar da Praia da Camboa com vista deslumbrante e acesso direto à praia." },
+      { "name": "Apto 02 - Premium (2 Banheiros)", "desc": "Nossa opção mais completa! 2 dormitórios com 2 banheiros. Ideal para famílias. Churrasqueira exclusiva e conforto premium frente ao mar." },
+      { "name": "Apto 03 - Conforto", "desc": "2 dormitórios aconchegantes, perfeito para famílias que querem espaço e conforto. Localização privilegiada frente ao mar." }
+    ]
+  }
+}
