@@ -8,7 +8,7 @@ import RegrasPage from "./pages/RegrasPage";
 import PraiasPage from "./pages/PraiasPage";
 import RestaurantesPage from "./pages/RestaurantesPage";
 import PasseiosPage from "./pages/PasseiosPage";
-import HospedagemPage from "./pages/HopedagemPage";
+import HospedagemPage from "./pages/HospedagemPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
