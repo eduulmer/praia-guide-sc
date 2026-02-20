@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
 import restRaizes from "@/assets/restauranteraizes.jpg";
-import restSteak from "@/assets/restaurantesteak.jpg";
+import restSteak from "@/assets/restaurantesteakhouse.jpg";
 import restIlla from "@/assets/restilla.jpg";
 import restPizzaria from "@/assets/restaurantepizza.jpg";
 import restPomodori from "@/assets/restaurantepomodori.jpg";
