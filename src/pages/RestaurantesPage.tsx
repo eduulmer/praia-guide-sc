@@ -3,7 +3,7 @@ import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
 import restRaizes from "@/assets/restauranteraizes.jpg";
 import restSteak from "@/assets/restaurantesteakhouse.jpg";
-import restIlla from "@/assets/restilla.jpg";
+import restIlla from "@/assets/restauranteilla.jpg";
 import restPizzaria from "@/assets/restaurantepizza.jpg";
 import restPomodori from "@/assets/restaurantepomodori.jpg";
 import restEdu from "@/assets/restauranteedu.jpg";
